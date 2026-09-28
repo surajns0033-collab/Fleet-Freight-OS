@@ -1,0 +1,6 @@
+{
+  "name": "Fleet & Freight OS",
+  "description": "Commercial fleet management, autonomous AI operations agent, automated load matching, real-time corridor fleet tracking, telematics diagnostics, and Google Workspace integration.",
+  "requestFramePermissions": ["geolocation", "microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

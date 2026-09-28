@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* High-contrast dark styling for real OpenStreetMap tiles with zero external watermarks */
+.leaflet-tile.map-tile-dark {
+  filter: brightness(0.65) invert(1) contrast(2.2) hue-rotate(205deg) saturate(0.3) brightness(0.75);
+}
+
+/* High-Contrast Day Mode for dispatchers working in bright sunlight / dock environments */
+.day-mode {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.day-mode .bg-slate-950 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.day-mode .bg-slate-900 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08) !important;
+}
+
+.day-mode .bg-slate-800,
+.day-mode .bg-slate-850 {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.day-mode .bg-slate-800\/60,
+.day-mode .bg-slate-800\/80,
+.day-mode .bg-slate-800\/90 {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+
+.day-mode .bg-slate-900\/80,
+.day-mode .bg-slate-900\/90 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.day-mode .text-white {
+  color: #0f172a !important;
+}
+
+.day-mode .text-slate-200 {
+  color: #1e293b !important;
+}
+
+.day-mode .text-slate-300 {
+  color: #334155 !important;
+}
+
+.day-mode .text-slate-400 {
+  color: #475569 !important;
+}
+
+.day-mode .border-slate-800,
+.day-mode .border-slate-750,
+.day-mode .border-slate-700 {
+  border-color: #cbd5e1 !important;
+}
+
+.day-mode input,
+.day-mode select,
+.day-mode textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+.day-mode .leaflet-tile.map-tile-dark {
+  filter: none !important;
+}
+

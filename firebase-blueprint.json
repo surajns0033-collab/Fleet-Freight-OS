@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "Order": {
+      "title": "Order",
+      "description": "Commercial freight orders and load tenders",
+      "type": "object",
+      "properties": {
+        "order_id": { "type": "string" },
+        "shipper_name": { "type": "string" },
+        "origin_city": { "type": "string" },
+        "origin_state_prov": { "type": "string" },
+        "dest_city": { "type": "string" },
+        "dest_state_prov": { "type": "string" },
+        "distance_miles": { "type": "number" },
+        "rate_cad": { "type": "number" },
+        "status": { "type": "string" }
+      },
+      "required": ["order_id", "shipper_name", "status"]
+    },
+    "Equipment": {
+      "title": "Equipment",
+      "description": "Tractors, reefers, and commercial vehicle fleet units",
+      "type": "object",
+      "properties": {
+        "unit_id": { "type": "string" },
+        "make_model": { "type": "string" },
+        "year": { "type": "number" },
+        "status": { "type": "string" },
+        "location": { "type": "string" }
+      },
+      "required": ["unit_id", "status"]
+    },
+    "Driver": {
+      "title": "Driver",
+      "description": "Commercial drivers and HOS duty statuses",
+      "type": "object",
+      "properties": {
+        "driver_id": { "type": "string" },
+        "name": { "type": "string" },
+        "duty_status": { "type": "string" },
+        "current_location": { "type": "string" }
+      },
+      "required": ["driver_id", "name", "duty_status"]
+    }
+  },
+  "firestore": {
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Freight orders collection"
+    },
+    "/equipment/{unitId}": {
+      "schema": "Equipment",
+      "description": "Fleet equipment units collection"
+    },
+    "/drivers/{driverId}": {
+      "schema": "Driver",
+      "description": "Drivers directory collection"
+    }
+  }
+}
